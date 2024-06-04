@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.3",
+    "sequelize": "^6.37.3",
+    "sqlite3": "^5.1.7",
+    "swagger": "^0.7.5",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "name": "exam_back",
+  "version": "1.0.0",
+  "main": "serveur.js",
+  "devDependencies": {
+    "mocha": "^2.5.3"
+  },
+  "scripts": {
+    "test": "mocha",
+    "dev": "nodemon serveur.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stomatt62/exam_back.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stomatt62/exam_back/issues"
+  },
+  "homepage": "https://github.com/stomatt62/exam_back#readme",
+  "description": ""
+}
