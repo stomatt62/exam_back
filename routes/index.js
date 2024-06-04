@@ -16,8 +16,8 @@ router.get("/blagues", controllerBlague.find);
 
 router.post("/blagues", controllerBlague.create);
 
-router.get("/blagues/:id", controllerBlague.findById);
-
 router.get("/blagues/random", controllerBlague.random);
+
+router.get("/blagues/:id", controllerBlague.findById);
 
 module.exports = router;
