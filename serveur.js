@@ -16,9 +16,13 @@ app.use(`/api/${version}`, router);
 // Middleware pour afficher la documentation Swagger
 //app.use(`/api-docs`, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-db.sync().then(() => {
-  console.log("DBConnect est synchronisé");
-  app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+db.sync()
+  .then(() => {
+    console.log("DBConnect est synchronisé");
+    app.listen(port, () => {
+      console.log(`Example app listening at http://localhost:${port}`);
+    });
+  })
+  .catch((err) => {
+    console.error("Unable to sync the database:", err);
   });
-});

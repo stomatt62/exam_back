@@ -1,17 +1,26 @@
-const { DataTypes } = require("sequelize");
-const db = require("./../db/dbconnect");
+const { Sequelize, DataTypes } = require("sequelize");
+const sequelize = require("../db/dbconnect");
 
-const Blague = db.define("Blague", {
-  // Model attributes are defined here
-  id: {
-    type: DataTypes.INTEGER,
-    autoIncrement: true,
-    primaryKey: true,
+const Blague = sequelize.define(
+  "Blague",
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+    question: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    reponse: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
-  question: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-});
+  {
+    tableName: "Blagues",
+  }
+);
 
 module.exports = Blague;

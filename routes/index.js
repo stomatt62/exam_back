@@ -1,13 +1,14 @@
 const express = require("express");
 const router = express.Router();
-const controllerBlague = require("./../controllers/index");
-//const {random} = require('./..:controllers/index')
+const controllerBlague = require("../controllers/index");
 
 router.get("/", (req, res) => {
+  console.log("GET /");
   res.status(200).json({ success: "RACINE API" });
 });
 
 router.post("/", (req, res) => {
+  console.log("POST /");
   res.status(200).json({ success: "bounty" });
 });
 
